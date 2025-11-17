@@ -175,7 +175,7 @@
     {
       show std.title: set align(center)
       show std.title: set par(leading: 0.5em)
-      show std.title: set text(size: 24pt, weight: "regular")
+      show std.title: set text(size: 15pt, weight: "bold")
       show std.title: set block(below: 8.35mm)
       std.title()
 
