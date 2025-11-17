@@ -132,7 +132,7 @@
       // We don't want to number the acknowledgment section.
       let is-ack = it.body in ([Acknowledgment], [Acknowledgement], [Acknowledgments], [Acknowledgements])
       set text(size: 12pt, weight: "bold")
-      show: block.with(above: 15pt, below: 13.75pt, sticky: true)
+      show: block.with(above: 18pt, below: 18pt, sticky: true)
       if it.numbering != none and not is-ack {
         numbering(it.numbering, ..levels)
         h(7pt, weak: true)
