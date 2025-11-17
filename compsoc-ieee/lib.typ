@@ -83,12 +83,12 @@
     paper: paper-size,
     // The margins depend on the paper size.
     margin: if paper-size == "a4" {
-      (x: 41.5pt, top: 80.51pt, bottom: 89.51pt)
+      (x: 0.75in, top: 1in, bottom: 1in)
     } else {
       (
-        x: (50pt / 216mm) * 100%,
-        top: (55pt / 279mm) * 100%,
-        bottom: (64pt / 279mm) * 100%,
+        x: 0.75in,
+        top: 1in,
+        bottom: 1in,
       )
     }
   )
