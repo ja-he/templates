@@ -219,7 +219,7 @@
     }
   )
 
-  set par(justify: true, first-line-indent: (amount: fli-len, all: true), spacing: 0.5em, leading: 0.475em)
+  set par(justify: true, first-line-indent: (amount: fli-len, all: true), spacing: 0.5em, leading: 0.467em)
 
   // Display abstract and index terms.
   if abstract != none {
