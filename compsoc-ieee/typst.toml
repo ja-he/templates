@@ -1,0 +1,16 @@
+[package]
+name = "compsoc-ieee"
+version = "0.1.0"
+compiler = "0.12.0"
+entrypoint = "lib.typ"
+repository = "https://github.com/typst/templates"
+authors = ["Typst GmbH <https://typst.app>"]
+license = "MIT-0"
+description = "TODO"
+keywords = ["TODO"]
+categories = ["paper"]
+disciplines = ["computer-science", "engineering"]
+
+[template]
+path = "template"
+entrypoint = "main.typ"
