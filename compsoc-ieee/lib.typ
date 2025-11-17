@@ -28,6 +28,8 @@
   // The paper's content.
   body
 ) = {
+  let fli-len = 1.5em;
+
   // Set document metadata.
   set document(title: title, author: authors.map(author => author.name))
 
@@ -150,7 +152,7 @@
     } else [
       // Third level headings are bold and run-in with the paragraph.
       #v(19pt, weak: true)
-      #h(-1.5em)
+      #h(-(fli-len))
       #if it.level == 3 and it.numbering != none {
         text(weight: "bold")[#numbering(it.numbering, ..levels)]
         [ ]
@@ -217,7 +219,7 @@
     }
   )
 
-  set par(justify: true, first-line-indent: (amount: 1.5em, all: true), spacing: 0.5em, leading: 0.475em)
+  set par(justify: true, first-line-indent: (amount: fli-len, all: true), spacing: 0.5em, leading: 0.475em)
 
   // Display abstract and index terms.
   if abstract != none {
