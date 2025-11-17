@@ -116,7 +116,7 @@
   set list(indent: 10pt, body-indent: 9pt)
 
   // Configure headings.
-  set heading(numbering: "I.A.a)")
+  set heading(numbering: "1.1.1")
   show heading: it => {
     // Find out the final number of the heading counter.
     let levels = counter(heading).get()
@@ -128,31 +128,29 @@
 
     set text(10pt, weight: 400)
     if it.level == 1 {
-      // First-level headings are centered smallcaps.
+      // First-level headings are left-aligned and bold.
       // We don't want to number the acknowledgment section.
       let is-ack = it.body in ([Acknowledgment], [Acknowledgement], [Acknowledgments], [Acknowledgements])
-      set align(center)
-      set text(if is-ack { 10pt } else { 11pt })
+      set text(size: 12pt, weight: "bold")
       show: block.with(above: 15pt, below: 13.75pt, sticky: true)
-      show: smallcaps
       if it.numbering != none and not is-ack {
-        numbering("I.", deepest)
+        numbering(it.numbering, ..levels)
         h(7pt, weak: true)
       }
       it.body
     } else if it.level == 2 {
-      // Second-level headings are run-ins.
-      set text(style: "italic")
+      // Second-level headings are bold and left-aligned.
+      set text(size: 11pt, weight: "bold")
       show: block.with(spacing: 10pt, sticky: true)
       if it.numbering != none {
-        numbering("A.", deepest)
+        numbering(it.numbering, ..levels)
         h(7pt, weak: true)
       }
       it.body
     } else [
       // Third level headings are run-ins too, but different.
       #if it.level == 3 {
-        numbering("a)", deepest)
+        numbering(it.numbering, ..levels)
         [ ]
       }
       _#(it.body):_
