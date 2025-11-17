@@ -148,12 +148,14 @@
       }
       it.body
     } else [
-      // Third level headings are run-ins too, but different.
-      #if it.level == 3 {
-        numbering(it.numbering, ..levels)
+      // Third level headings are bold and run-in with the paragraph.
+      #v(19pt, weak: true)
+      #h(-1.5em)
+      #if it.level == 3 and it.numbering != none {
+        text(weight: "bold")[#numbering(it.numbering, ..levels)]
         [ ]
       }
-      _#(it.body):_
+      #text(weight: "bold")[#it.body:]
     ]
   }
 
