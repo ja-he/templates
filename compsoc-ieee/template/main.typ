@@ -1,4 +1,4 @@
-#import "@preview/compsoc-ieee:0.1.4": ieee
+#import "@preview/compsoc-ieee:0.1.0": ieee
 
 #show: ieee.with(
   title: [A Typesetting System to Untangle the Scientific Writing Process],
