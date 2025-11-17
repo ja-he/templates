@@ -77,7 +77,7 @@
   )
 
   // Configure the page and multi-column properties.
-  set columns(gutter: 12pt)
+  set columns(gutter: 17pt)
   set page(
     columns: 2,
     paper: paper-size,
