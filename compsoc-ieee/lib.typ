@@ -132,7 +132,7 @@
       // We don't want to number the acknowledgment section.
       let is-ack = it.body in ([Acknowledgment], [Acknowledgement], [Acknowledgments], [Acknowledgements])
       set text(size: 12pt, weight: "bold")
-      show: block.with(above: 18pt, below: 18pt, sticky: true)
+      show: block.with(spacing: 19pt, sticky: true)
       if it.numbering != none and not is-ack {
         numbering(it.numbering, ..levels)
         h(7pt, weak: true)
@@ -141,7 +141,7 @@
     } else if it.level == 2 {
       // Second-level headings are bold and left-aligned.
       set text(size: 11pt, weight: "bold")
-      show: block.with(spacing: 10pt, sticky: true)
+      show: block.with(spacing: 19pt, sticky: true)
       if it.numbering != none {
         numbering(it.numbering, ..levels)
         h(7pt, weak: true)
