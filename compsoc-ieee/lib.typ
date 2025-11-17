@@ -116,7 +116,7 @@
   set list(indent: 10pt, body-indent: 9pt)
 
   // Configure headings.
-  set heading(numbering: "1.1.1")
+  set heading(numbering: "1.1.1.")
   show heading: it => {
     // Find out the final number of the heading counter.
     let levels = counter(heading).get()
